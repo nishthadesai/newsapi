@@ -27,9 +27,9 @@ class _ViewState extends State<View> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text('News App'),
+        title: const Text('News App'),
         backgroundColor: Colors.white,
-        titleTextStyle: TextStyle(fontSize: 25, color: Colors.black),
+        titleTextStyle: const TextStyle(fontSize: 25, color: Colors.black),
       ),
       body: FutureBuilder(
         future: Apiservice().getArticle(),
@@ -45,10 +45,10 @@ class _ViewState extends State<View> {
                             MaterialPageRoute(
                                 builder: (context) => Detail(
                                   author: '${snapshot.data![index].author}',
-                                  title: '${snapshot.data![index].title}',
+                                  title: snapshot.data![index].title,
                                   description: '${snapshot.data![index].description}',
                                   urlToImage: '${snapshot.data![index].urlToImage}',
-                                  publishedAt: '${snapshot.data![index].publishedAt}',
+                                  publishedAt: snapshot.data![index].publishedAt,
                                 ),),);
                       },
                       child: Card(
@@ -61,11 +61,11 @@ class _ViewState extends State<View> {
                                 width: 400,
                               ),
                               Text(
-                                '${snapshot.data![index].title}',
+                                snapshot.data![index].title,
                                 style:
-                                    TextStyle(fontSize: 20, color: Colors.cyan),
+                                    const TextStyle(fontSize: 20, color: Colors.cyan),
                               ),
-                              SizedBox(
+                              const SizedBox(
                                 height: 10,
                               ),
                               Text(
@@ -73,14 +73,14 @@ class _ViewState extends State<View> {
                                 maxLines: 2,
                                 overflow: TextOverflow.ellipsis,
                               ),
-                              SizedBox(
+                              const SizedBox(
                                 height: 10,
                               ),
                             ],
                           )));
                 });
           }
-          return Center(child: CircularProgressIndicator());
+          return const Center(child: CircularProgressIndicator());
         },
       ),
     );

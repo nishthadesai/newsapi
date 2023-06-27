@@ -23,38 +23,38 @@ class Detail extends StatelessWidget {
           child: Column(mainAxisAlignment: MainAxisAlignment.center,
             crossAxisAlignment: CrossAxisAlignment.center,
             children: [
-              Image.network('${urlToImage}'),
-              SizedBox(
+              Image.network('$urlToImage'),
+              const SizedBox(
                 height: 20,
               ),
               Text(
                 '$author',
                 style:
-                TextStyle(fontSize: 20, color: Colors.red),
+                const TextStyle(fontSize: 20, color: Colors.red),
               ),
-              SizedBox(
+              const SizedBox(
                 height: 20,
               ),
               Text(
                 '$title',
                 style:
-                TextStyle(fontSize: 20, color: Colors.cyan),
+                const TextStyle(fontSize: 20, color: Colors.cyan),
               ),
-              SizedBox(
+              const SizedBox(
                 height: 20,
               ),
               Text(
                 '$description',),
-              SizedBox(
+              const SizedBox(
                 height: 20,
               ),
 
-              SizedBox(
+              const SizedBox(
                 height: 20,
               ),
               Text(
                 '$publishedAt',),
-              SizedBox(
+              const SizedBox(
                 height: 20,
               ),
             ],
